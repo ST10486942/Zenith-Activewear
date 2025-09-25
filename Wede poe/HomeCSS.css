@@ -1,0 +1,149 @@
+/* Reset default margins */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* General body styling */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 15px 30px;
+}
+
+header .logo {
+    font-size: 24px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+/* Hero section */
+.hero {
+    margin: 30px 0;
+}
+
+.hero h2 {
+    color: gray;
+    margin: 15px 0;
+    font-size: 20px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.shop-btn:hover {
+    background: gray;
+    color: white;
+}
+
+/* Product section */
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.product img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid white;
+    font-size: 12px;
+    color: gray;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    nav a {
+        font-size: 12px;
+        margin: 0 5px;
+    }
+    
+    .products {
+        gap: 20px;
+    }
+    
+    .product img {
+        width: 120px;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .hero h2 {
+        font-size: 16px;
+    }
+
+    .shop-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .products {
+        flex-direction: column;
+        gap: 15px;
+        margin: 20px 0;
+    }
+
+    .product img {
+        width: 100px;
+    }
+
+    .product p {
+        font-size: 14px;
+    }
+}
