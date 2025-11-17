@@ -6,6 +6,7 @@ New Information for Part 2
   New Information for Part 3
   Part 3 
 Added features on the Contact Page:
+Added a lightbox
 •	Added a message type dropdown (required by instructions).
 •	Added required validation to all fields.
 •	Replaced the basic mailto form submission with JavaScript handling.
