@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page - Zenith Activewear</title>
-
-    <!-- Link to external CSS -->
     <link rel="stylesheet" href="HomeCSS.css">
+
+    <style>
+        /* Basic fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .lightbox img {
+            width: 60%;
+            border-radius: 10px;
+        }
+
+        /* Search bar */
+        .search-container {
+            text-align: center;
+            margin: 20px;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid gray;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+            z-index: 1001;
+        }
+        .modal button {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,33 +84,32 @@
         <a href="products.html" class="shop-btn">SHOP NOW</a>
     </section>
 
-    <!-- Products -->
-    <section class="products">
-        <div class="product">
-            <img src="Pictures/ShirtWhite.png" alt="White Activewear Shirt">
-            <p>R299</p>
-        </div>
-        <div class="product">
-            <img src="Pictures/BlackShirt.jpeg" alt="Black Activewear Shirt">
-            <p>R299</p>
-        </div>
-    </section>
+    <!-- Search bar -->
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for products...">
+    </div>
 
-    <!-- Shorts -->
-    <section class="products">
-        <div class="product">
-            <img src="Pictures/WhiteShorts.jpg" alt="White Activewear Shorts">
-            <p>R199</p>
-        </div>
-        <div class="product">
-            <img src="Pictures/Blackshorts.jpg" alt="Black Activewear Shorts">
-            <p>R199</p>
-        </div>
-    </section>
+    <!-- Products -->
+    <section id="product-container" class="products"></section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" alt="Expanded product view">
+    </div>
+
+    <!-- Modal Example -->
+    <div id="promoModal" class="modal">
+        <h3>Welcome to Zenith Activewear!</h3>
+        <p>Enjoy 10% off on your first purchase. Use code <b>ZEN10</b> at checkout!</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Zenith Activewear. All rights reserved.</p>
     </footer>
+
+    <!-- External JavaScript -->
+    <script src="HomeJS.js"></script>
 </body>
 </html>
