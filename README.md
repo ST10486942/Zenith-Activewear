@@ -4,7 +4,7 @@ New Information for Part 2
 - Updated navigation links
 - Updated photos
   New Information for Part 3
-  Part 3
+  Part 3 
 Added features on the Contact Page:
 •	Added a message type dropdown (required by instructions).
 •	Added required validation to all fields.
